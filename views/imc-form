@@ -1,0 +1,11 @@
+<h1>Calculadora de IMC</h1>
+
+<form method="POST" action="/imc">
+  {{#fields}}
+    {{#field}}
+      <label>{{label}}</label>
+      <input type="{{type}}" name="{{name}}" step="0.01" required {{#errors}}class="error"{{/errors}}>
+    {{/field}}
+  {{/fields}}
+  <button type="submit">Calcular IMC</button>
+</form>
